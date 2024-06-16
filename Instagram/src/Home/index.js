@@ -1,43 +1,43 @@
-import React from 'react'
-import { View, Text, Image, FlatList, TouchableOpacity } from 'react-native'
-import { AntDesign, FontAwesome } from '@expo/vector-icons'
-import { LinearGradient } from 'expo-linear-gradient'
-import styles from './style'
-import Post from './componentes/post'
+import React from 'react';
+import { View, Image, FlatList, TouchableOpacity, Text } from 'react-native';
+import { AntDesign, FontAwesome } from '@expo/vector-icons';
+import { LinearGradient } from 'expo-linear-gradient';
+import styles from './style';
+import Post from './componentes/post'; 
 
-const Home = ({ navigation }) => {
+const HomeScreen = ({ navigation }) => {
   const stories = [
-    { id: '1', type: 'story', source: require('../assets/mariamarcela.jpeg'), name: 'Seu story' }, 
-    { id: '2', type: 'story', source: require('../assets/unifacef.jpeg'), name: 'unifacef' },
-    { id: '3', type: 'story', source: require('../assets/spotify.jpeg'), name: 'spotify' },
-    { id: '4', type: 'story', source: require('../assets/eddydata.jpeg'), name: 'eddydata' },
+    { id: '1', type: 'story', source: require('../../assets/mariamarcela.jpeg'), name: 'Seu story' }, 
+    { id: '2', type: 'story', source: require('../../assets/unifacef.jpeg'), name: 'unifacef' },
+    { id: '3', type: 'story', source: require('../../assets/spotify.jpeg'), name: 'spotify' },
+    { id: '4', type: 'story', source: require('../../assets/eddydata.jpeg'), name: 'eddydata' },
   ];
 
   const posts = [
     {
       id: 'p1',
       type: 'post',
-      profileImage: require('../assets/mariamarcela.jpeg'),
+      profileImage: require('../../assets/mariamarcela.jpeg'),
       profileName: 'mariamarcela_',
-      postImage: require('../assets/1.png'),
+      postImage: require('../../assets/1.png'),
       likes: 259,
       description: 'teste',
     },
     {
       id: 'p2',
       type: 'post',
-      profileImage: require('../assets/unifacef.jpeg'),
+      profileImage: require('../../assets/unifacef.jpeg'),
       profileName: 'unifacef',
-      postImage: require('../assets/2.png'), 
+      postImage: require('../../assets/2.png'), 
       likes: 314,
       description: 'Venha participar do Hackthon!',
     },
     {
       id: 'p3',
       type: 'post',
-      profileImage: require('../assets/spotify.jpeg'),
+      profileImage: require('../../assets/spotify.jpeg'),
       profileName: 'spotify',
-      postImage: require('../assets/3.png'), 
+      postImage: require('../../assets/3.png'), 
       likes: 400,
       description: 'Atualize sua playlist com os novos sucessos.',
     },
@@ -84,7 +84,7 @@ const Home = ({ navigation }) => {
       return (
         <View style={styles.header}>
           <Image
-            source={require('../assets/Instagram-Logo-removebg-preview.png')}
+            source={require('../../assets/Instagram-Logo-removebg-preview.png')}
             style={styles.logo}
           />
           <View style={styles.headerIcons}>
@@ -127,4 +127,4 @@ const Home = ({ navigation }) => {
   )
 }
 
-export default Home
+export default HomeScreen;
