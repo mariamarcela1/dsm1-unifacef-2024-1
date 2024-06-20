@@ -21,12 +21,12 @@ const LoginScreen = ({ navigation }) => {
     language,
     logoInstagram,
     input,
-    btnLogin,
-    btnTextLogin,
-    passwordAlert,
-    btnCreateAccount,
-    btnTextCreateAccount,
-    logoMeta,
+    Login,
+    TextLogin,
+    password,
+    CriarConta,
+    TextCriarConta,
+    NomeCompleto,
   } = styles;
 
   return (
@@ -50,21 +50,21 @@ const LoginScreen = ({ navigation }) => {
       />
       <CustomTextInput style={input} placeholder="Senha" />
       <TouchableOpacity
-        style={btnLogin}
+        style={Login}
         onPress={() => navigation.navigate("home")}
       >
-        <Text style={btnTextLogin}>Entrar</Text>
+        <Text style={TextLogin}>Entrar</Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={() => navigation.navigate("forgot-password")}>
-        <Text style={passwordAlert}>Esqueceu a senha?</Text>
+        <Text style={password}>Esqueceu a senha?</Text>
       </TouchableOpacity>
       <TouchableOpacity
-        style={btnCreateAccount}
+        style={CriarConta}
         onPress={() => navigation.navigate("create-account-screen")}
       >
-        <Text style={btnTextCreateAccount}>Criar nova conta</Text>
+        <Text style={TextCriarConta}>Criar nova conta</Text>
       </TouchableOpacity>
-      <Image source={require("../../assets/meta-logo.png")} style={logoMeta} />
+      <Text style={NomeCompleto}>Maria Marcela Sousa</Text>
     </View>
   );
 };

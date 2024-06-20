@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     left: 20,
     top: 60,
   },
-  btnCreateAccount: {
+  CriarConta: {
     padding: 15,
     width: "80%",
     borderRadius: 30,
@@ -18,7 +18,7 @@ export const styles = StyleSheet.create({
     borderColor: "#2E82EA",
     borderWidth: 1.5,
   },
-  btnLogin: {
+  Login: {
     backgroundColor: "#2E82EA",
     padding: 15,
     margin: 10,
@@ -26,12 +26,12 @@ export const styles = StyleSheet.create({
     borderRadius: 30,
     marginBottom: 15,
   },
-  btnTextCreateAccount: {
+  TextCriarConta: {
     color: "#2E82EA",
     fontSize: 20,
     textAlign: "center",
   },
-  btnTextLogin: {
+  TextLogin: {
     color: "#fff",
     fontSize: 20,
     textAlign: "center",
@@ -71,10 +71,10 @@ export const styles = StyleSheet.create({
     objectFit: "contain",
     marginBottom: 90,
   },
-  logoMeta: {
-    width: 120,
-    height: 40,
-    objectFit: "contain",
+  NomeCompleto: {
+    fontSize: 20,
+    color: "#666666",
+    marginTop: 20,
   },
   passwordAlert: {
     fontSize: 18,
