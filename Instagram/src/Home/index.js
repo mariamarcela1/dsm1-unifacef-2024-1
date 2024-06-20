@@ -1,15 +1,15 @@
-import React from 'react';
-import { View, Image, FlatList, TouchableOpacity, Text } from 'react-native';
-import { AntDesign, FontAwesome } from '@expo/vector-icons';
-import { LinearGradient } from 'expo-linear-gradient';
-import styles from './style';
-import Post from './componentes/post'; 
+import React from 'react'
+import { View, Text, Image, FlatList, TouchableOpacity } from 'react-native'
+import { AntDesign, FontAwesome } from '@expo/vector-icons'
+import { LinearGradient } from 'expo-linear-gradient'
+import styles from './style'
+import Post from '../componentes/post'
 
-const HomeScreen = ({ navigation }) => {
+const Home = () => {
   const stories = [
     { id: '1', type: 'story', source: require('../../assets/mariamarcela.jpeg'), name: 'Seu story' }, 
     { id: '2', type: 'story', source: require('../../assets/unifacef.jpeg'), name: 'unifacef' },
-    { id: '3', type: 'story', source: require('../../assets/spotify.jpeg'), name: 'spotify' },
+    { id: '3', type: 'story', source: require('../../assets/spotify.png'), name: 'spotify' },
     { id: '4', type: 'story', source: require('../../assets/eddydata.jpeg'), name: 'eddydata' },
   ];
 
@@ -35,7 +35,7 @@ const HomeScreen = ({ navigation }) => {
     {
       id: 'p3',
       type: 'post',
-      profileImage: require('../../assets/spotify.jpeg'),
+      profileImage: require('../../assets/spotify.png'),
       profileName: 'spotify',
       postImage: require('../../assets/3.png'), 
       likes: 400,
@@ -127,4 +127,4 @@ const HomeScreen = ({ navigation }) => {
   )
 }
 
-export default HomeScreen;
+export default Home;

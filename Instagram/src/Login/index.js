@@ -25,6 +25,7 @@ const LoginScreen = ({ navigation }) => {
     btnTextLogin,
     passwordAlert,
     btnCreateAccount,
+    btnTextCreateAccount,
     logoMeta,
   } = styles;
 
@@ -50,7 +51,7 @@ const LoginScreen = ({ navigation }) => {
       <CustomTextInput style={input} placeholder="Senha" />
       <TouchableOpacity
         style={btnLogin}
-        onPress={() => navigation.navigate("Home")}
+        onPress={() => navigation.navigate("home")}
       >
         <Text style={btnTextLogin}>Entrar</Text>
       </TouchableOpacity>
@@ -66,6 +67,11 @@ const LoginScreen = ({ navigation }) => {
       <Image source={require("../../assets/meta-logo.png")} style={logoMeta} />
     </View>
   );
+};
+
+CustomTextInput.propTypes = {
+  placeholder: PropTypes.string.isRequired,
+  style: PropTypes.object.isRequired,
 };
 
 LoginScreen.propTypes = {
